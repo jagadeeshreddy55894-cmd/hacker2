@@ -1,19 +1,7 @@
+
 <!doctype html>
 <html lang="en">
 <head>
-  <!-- PWA -->
-<link rel="manifest" href="manifest.json">
-
-<meta name="theme-color" content="#333333">
-
-<!-- Mobile install support -->
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="black">
-<meta name="apple-mobile-web-app-title" content="Mess Pass">
-
-<!-- Apple icon -->
-<link rel="apple-touch-icon" href="icon-192.png">
-
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
 <title>Mess Pass</title>
@@ -30,7 +18,7 @@
   body{
     margin:0;
     font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-    background:#f3f3f0;
+    background:f3f3f0;
     color:var(--text);
   }
 
@@ -69,7 +57,7 @@
 
   .wrap{display:flex;justify-content:center;padding:18px 8px 40px;}
   .card{
-    width:98%;
+    width:97%;
     max-width:var(--card-max);
     background:#f2f2f2;       /* less bright white */
     border-radius:var(--card-radius);
@@ -198,10 +186,10 @@
     font-weight:600;
   }
 
-  /* Brown box — FULL WIDTH again */
+  /* Brown box — FULL WIDTH again blue*/
   .brown-box{
     width:100%;
-    background:#008080;
+    background:#008080;  
     padding:22px;
     border-bottom-left-radius:var(--card-radius);
     border-bottom-right-radius:var(--card-radius);
@@ -273,8 +261,8 @@
 
           <div class="title-col">
             <div class="meal-title" id="mealTitle"></div>
-            <div class="sid">12316580</div>
-            <div class="line">Masineedi Lokesh</div>
+            <div class="sid">12311286</div>
+            <div class="line">Jagan Mohan</div>
             <div class="line">Mess-Centre-02</div>
           </div>
         </div>
@@ -347,29 +335,34 @@ function updateMeal() {
   const hour = now.getHours();
   let meal = "Dinner";
 
-  if (hour < 11) meal = "Breakfast";
+  if (hour < 11) meal = "BreakFast";
   else if (hour < 16) meal = "Lunch";
 
   document.getElementById("mealTitle").textContent = meal;
 }
 
 updateMeal();
-<script>
-if ("serviceWorker" in navigator) {
-  window.addEventListener("load", () => {
-    navigator.serviceWorker.register("sw.js")
-      .then(() => console.log("Service Worker Registered"))
-      .catch(err => console.log("SW registration failed", err));
-  });
-}
-</script>
-
 
 </script>
-  
 
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
